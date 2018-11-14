@@ -4,9 +4,9 @@
   "description": "A Probot App to Assign Engineers to PRs",
   "author": "Albert Guo <aguo@exabeam.com> (https://github.com/albert-guo-exa/exa-assignee-bot)",
   "license": "ISC",
-  "repository": "https://github.com//exa-assignee-bot.git",
-  "homepage": "https://github.com//exa-assignee-bot",
-  "bugs": "https://github.com//exa-assignee-bot/issues",
+  "repository": "https://github.com/albert-guo-exa/exa-assignee-bot.git",
+  "homepage": "https://github.com/albert-guo-exa/exa-assignee-bot",
+  "bugs": "https://github.com/albert-guo-exa/exa-assignee-bot/issues",
   "keywords": [
     "probot",
     "github",
