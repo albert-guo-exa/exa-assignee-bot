@@ -3,8 +3,15 @@ module.exports = app => {
   app.log('Yay, the app was loaded!')
 
   app.on('issues.opened', async context => {
-    const issueComment = context.issue({ body: 'Thanks for opening this issue!' })
-    return context.github.issues.createComment(issueComment)
+    //Put Name of Assignees in this list
+    const assigned_folks = ['albert-guo-exa'];
+
+    if (assigned_folks.includes(context.payload.pull_request.user.login)) {
+      const assigneesBody = context.issue({
+        assignees: assigned_folks
+      });
+      return context.github.issues.addAssigneesToIssue(assigneesBody);
+    }
   })
 
   // For more information on building apps:
