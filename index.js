@@ -2,10 +2,9 @@ module.exports = app => {
   // Your code here
   app.log('Yay, the app was loaded!')
 
-  app.on('issues.opened', async context => {
+  app.on('pull_request.opened', async context => {
     //Put Name of Assignees in this list
     const assigned_folks = ['albert-guo-exa'];
-
     if (assigned_folks.includes(context.payload.pull_request.user.login)) {
       const assigneesBody = context.issue({
         assignees: assigned_folks
